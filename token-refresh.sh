@@ -6,8 +6,12 @@ if [[ ! -f ./secrets/testFile ]]; then
     exit 1
 else
     source ./secrets/bskyCreds.env # BlueSky creds
-    source ./secrets/errors.env # Error Handling Email Address
+    source ./secrets/errorReporting.env # Error Handling Email Address
 fi
+
+# Restrict access to items in secrets folder
+chmod 600 ./secrets
+chmod 600 ./secrets/*
 
 # Vars
 currentTokenFile="./secrets/bskyAccessToken.txt"
