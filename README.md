@@ -20,7 +20,7 @@ The BlueSky API documentation does not specify exact expiration times for access
 
 CONFIGURATION OPTIONS
 
-To avoid hardcoding sensitive values, this script uses environment variables for configuration. The following variables must be set:
+To avoid hardcoding sensitive values, this script uses environment variables for configuration. The following variables must be set in ./secrets/errorReporting.env:
 
     $errorRecipient: The email address to receive error notifications.
     $myUsername: The Linux username with a configured email client.
