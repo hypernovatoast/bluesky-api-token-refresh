@@ -5,7 +5,6 @@ if [[ ! -f ./secrets/testFile ]]; then
     echo "Script not executed with administrator privledges. Aborting."
     exit 1
 else
-    source ./secrets/bskyCreds.env # BlueSky creds
     source ./secrets/errorReporting.env # Error Handling Email Address
 fi
 
