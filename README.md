@@ -1,12 +1,13 @@
 Automatically refresh BlueSky API access tokens.
 
 This script helps you automate the process of refreshing your BlueSky API access token.
-Prerequisites
 
-    You must already have a valid BlueSky access token and refresh token.
-    Place the tokens in the following locations after cloning the repository:
-        Access Token: ./secrets/bskyAccessToken.txt
-        Refresh Token: ./secrets/bskyRefreshToken.txt
+PREREQUISITES
+
+- You must already have a valid BlueSky access token and refresh token.
+- As the root user (this folder is restricted with 600 permissions), place the tokens in the following locations after cloning the repository:
+  - Access Token: ./secrets/bskyAccessToken.txt
+  - Refresh Token: ./secrets/bskyRefreshToken.txt
 
 
 USAGE
