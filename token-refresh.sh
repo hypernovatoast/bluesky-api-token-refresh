@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Makes sure this script is run as Su.
-if [[ ! -f ./secrets/testFile ]]; then
+if [[ $EUID -ne 0 ]]; then
     echo "Script not executed with administrator privledges. Aborting."
     exit 1
 else
