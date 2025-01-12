@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
     echo "Script not executed with administrator privledges. Aborting."
     exit 1
 else
-    source ./secrets/errorReporting.env # Error Handling Email Address
+    source ./secrets/errorReporting.env # Error handling vars. See README for more info.
 fi
 
 # Restrict access to items in secrets folder
