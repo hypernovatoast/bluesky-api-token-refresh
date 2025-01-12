@@ -27,10 +27,11 @@ To avoid hardcoding sensitive values, this script uses environment variables for
 
 If you prefer not to use environment variables, you can modify the script directly to include these values.
 
-EMAIL NOTIFICATIONS
+ERROR ALERTING
 
-This script uses mutt as the email client for error notifications. If you use a different email client, you may need to update the email-sending commands in the script accordingly.
-Setting Up the Cron Job
+This script uses mutt as the email client for sending error notifications. If you use a different email client, you may need to update the email-sending commands in the script accordingly.
+
+SETTING UP THE CRON JOB
 
 To schedule the script, add a Cron job with the desired frequency. For example, to run the script hourly, you can add the following line to your crontab:
 
