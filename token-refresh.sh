@@ -5,13 +5,13 @@ if [[ ! -f /secrets/testFile ]]; then
     echo "Script not executed with administrator privledges. Aborting."
     exit 1
 else
-    source /secrets/bsky/bskyCreds.env # BlueSky creds
-    source /secrets/bsky/errors.env # Error Handling Email Address
+    source ./secrets/bskyCreds.env # BlueSky creds
+    source ./secrets/errors.env # Error Handling Email Address
 fi
 
 # Vars
-currentTokenFile="/secrets/bsky/bskyAccessToken.txt"
-refreshTokenFile="/secrets/bsky/bskyRefreshToken.txt"
+currentTokenFile="./secrets/bskyAccessToken.txt"
+refreshTokenFile="./secrets/bskyRefreshToken.txt"
 refreshToken=$(cat "$refreshTokenFile")
 
 # Error Handling
