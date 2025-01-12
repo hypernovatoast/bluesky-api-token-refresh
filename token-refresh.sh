@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Makes sure this script is run as Su.
-if [[ ! -f /secrets/testFile ]]; then
+if [[ ! -f ./secrets/testFile ]]; then
     echo "Script not executed with administrator privledges. Aborting."
     exit 1
 else
@@ -21,7 +21,7 @@ erroralert() {
     local curlError2=$2
     local thisScript=$(realpath "$0")
 
-    printf "Your script failed because it suuuucks!!.\n\nError: ${curlError1}\nMessage:${curlError2}\n\n------\nNerd Stuff:\nScript: ${thisScript}\n" | sudo -u sp mutt -s 'Script Failed!' -- "${errorRecipient}"
+    printf "Your script failed because it suuuucks!!.\n\nError: ${curlError1}\nMessage:${curlError2}\n\n------\nNerd Stuff:\nScript: ${thisScript}\n" | sudo -u $myUsername mutt -s 'Script Failed!' -- "${errorRecipient}"
 }
 
 # Request Token Swap
